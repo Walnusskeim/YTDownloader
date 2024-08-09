@@ -1,0 +1,23 @@
+<BoxLayout>:
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: 0.19, 0.19, 0.19, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    Label:
+        text: 'Gib unten den Link zu dem YouTube-Video ein'
+        font_size: 32
+        text_size: self.size
+        halign: 'center'
+        pos_hint: {'center_x': 0.5}
+        size_hint_y: None
+
+    TextInput:
+        id: url_input
+        multiline: True
+        size_hint_y: None
+        height: cm(1.5)
+        text: 'Gib hier die URL des Videos ein'
