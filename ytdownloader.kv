@@ -1,0 +1,33 @@
+<MyGridLayout>:
+
+    url:url
+
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
+
+        Label:
+            text: "YouTube Downloader"
+            font_size: 30
+            id: heading
+
+        GridLayout:
+            cols: 4
+
+            Label:
+                text: "Enter URL"
+                font_size: 20
+
+            TextInput:
+                id: url
+                multiline: True
+
+            Button:
+                id: download
+                text: "Download"
+                font_size: 32
+                on_press: root.press()
+
+        Label:
+            text: "(Das Video wird in den Downloads ordner gespeichert)"
+            font_size: 20
