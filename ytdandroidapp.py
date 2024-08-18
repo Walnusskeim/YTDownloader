@@ -13,17 +13,21 @@ kivy.require('1.9.0')
 Builder.load_file('ytdownloader.kv')
 
 
-class MyGridLayout(Widget):
+class MyLayout(Widget):
 
     url = ObjectProperty(None)
 
 
-    def press(self):
-        url = self.url.text
+    #def press(self):
+        #try:
+            #url = self.url.text
+            #print("Das ist dein Link: ", url)
 
-        print("Das ist dein Link: ", url)
+        #except:
+         #   self.add_widget(Label(text="Das war wohl kein YouTube Link!"))
+          #  self.url.text = ""
 
-        self.url.text = ""
+            #self.url.text = ""
 
         #try:
          #   path = "/storage/emulated/0/Download/"
@@ -39,7 +43,7 @@ class MyGridLayout(Widget):
 
 class YTD(App):
     def build(self):
-        return MyGridLayout()
+        return MyLayout()
 
 
 if __name__ == "__main__":
